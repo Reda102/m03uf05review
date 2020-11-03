@@ -48,7 +48,7 @@ public class ExceptionMain {
                 throw new EresDemasiadoMayor("Edad no permitida, usted tiene que tener menos de 100 años !!!");
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            Logger.getLogger(ExceptionMain.class.getName()).log(Level.SEVERE, null, e);
         }
 
     }
