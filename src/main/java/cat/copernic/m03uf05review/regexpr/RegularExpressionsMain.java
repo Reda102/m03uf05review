@@ -18,8 +18,8 @@ public class RegularExpressionsMain {
     /**
      * Expresión regular que valide NIE
      */
-    static boolean validateNIF(String nif) {
-        Pattern p = Pattern.compile("\\d{8}\\p{Upper}");
+    static boolean validateNIF(String nif) {       
+        Pattern p = Pattern.compile("\\d{8}\\p{Upper}"); // contendra 8 cifras + el patern mayuscula
         Matcher m = p.matcher(nif);
 
         return m.matches();
