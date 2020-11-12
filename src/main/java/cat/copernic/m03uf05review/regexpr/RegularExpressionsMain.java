@@ -29,20 +29,9 @@ public class RegularExpressionsMain {
     /**
      * Expresión regular que valide un telefono de movil
      */
-    static boolean validateTLF(String tlf) {
+    static boolean validateTLF(String tlf) {  // 3 cifras separadas por 3
         Pattern p = Pattern.compile("\\d{3}\\s\\d{3}\\s\\d{3}");
         Matcher m = p.matcher(tlf);
-
-        return m.matches();
-
-    }
-
-    /**
-     * Expresión regular que valide un telefono de España
-     */
-    static boolean validateTLFEspañol(String tlfE) {
-        Pattern p = Pattern.compile("\\+34\\s\\d{3}\\s\\d{2}\\s\\d{2}\\s\\d{2}");
-        Matcher m = p.matcher(tlfE);
 
         return m.matches();
 
@@ -52,8 +41,8 @@ public class RegularExpressionsMain {
      * Expresión regular que valide una matricula: 4 digitos espacio 3 letras
      * mayúscula sin vocales
      */
-    static boolean validateMatriculaCoche(String matricula) {
-        Pattern p = Pattern.compile("\\d{4}\\s[A-Z&&[^AEIOU]]{3}");
+    static boolean validateMatriculaCoche(String matricula) { // 4 cifras + verificar la vocal del A-Z que tendra 3 espacios
+        Pattern p = Pattern.compile("\\d{4}\\s[A-Z&&[^AEIOU]]{3}"); 
         Matcher m = p.matcher(matricula);
 
         return m.matches();
@@ -63,7 +52,8 @@ public class RegularExpressionsMain {
     /**
      * Expresión regular que valide una fecha formato dd/mm/aaaa
      */
-    static boolean validateFecha(String fecha) {
+    static boolean validateFecha(String fecha) {// contendra 1 espacio + otro numero obligatorio del 1 al 9 + minimo 12 y otro numero obligatorio del 0 al 9
+                                                            
         Pattern p = Pattern.compile("(0[1-9]|[12][0-9]|^3[01])\\/(0[1-9]|1[012])\\/[0-9]{4}");
         Matcher m = p.matcher(fecha);
 
@@ -74,7 +64,7 @@ public class RegularExpressionsMain {
     /**
      * Expresión regular que valide un email
      */
-    static boolean validateEmail(String email) {
+    static boolean validateEmail(String email) { // contendra todos los caracteres + caracteres numericos del 0 al 9 + caracteres como . _ - aparte de la @ y todos los caracteres de nuevo.
         Pattern p = Pattern.compile("^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+(\\.[a-zA-Z0-9-]+)$");
         Matcher m = p.matcher(email);
 
