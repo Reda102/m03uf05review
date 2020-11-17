@@ -44,7 +44,7 @@ public abstract class CuentaCorritenteImpl implements CuentaCorriente {
         return "CuentaCorritenteImpl [" + "EL Titular es: " + titular + ", con un saldo de: " + saldo + ']';
     }
 
-    @Override
+    @Override // Excepciones de la interficie Ingresa y Abona
     public void ingresa(double ingreso) {
         if (ingreso <= 0) {
             try {
@@ -56,7 +56,7 @@ public abstract class CuentaCorritenteImpl implements CuentaCorriente {
         saldo = saldo + ingreso;
     }
 
-    @Override
+    @Override 
     public void abona(double abono) {
         if (abono <= 0) {
             try {
