@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public abstract class CuentaCorritenteImpl implements CuentaCorriente {
     
     private String titular;
-    protected double saldo;
+    private double saldo;
 
     public CuentaCorritenteImpl(String titular, double saldo) {
         this.titular = titular;
@@ -44,7 +44,7 @@ public abstract class CuentaCorritenteImpl implements CuentaCorriente {
         return "CuentaCorritenteImpl [" + "EL Titular es: " + titular + ", con un saldo de: " + saldo + ']';
     }
 
-    @Override // Excepciones de la interficie Ingresa y Abona
+    @Override // Excepciones de la interficie Ingresa y Abona para evitar meter  "0".
     public void ingresa(double ingreso) {
         if (ingreso <= 0) {
             try {

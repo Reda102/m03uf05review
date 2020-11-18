@@ -17,13 +17,13 @@ public class MainCuentaCorriente {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        //Cuenta Corriente Gold
-        CuentaCorriente cuentaGold = new CuentaCorrienteACreditoGold("Mohamed",50000.0);
-        cuentaGold.abona(4000.50); 
-        cuentaGold.ingresa(500.50);
-        System.out.println("La Cuenta Gold "+cuentaGold + "\n");
-        
-        
+//        //Cuenta Corriente Gold
+//        CuentaCorriente cuentaGold = new CuentaCorrienteACreditoGold("Mohamed",50000.0);
+//        cuentaGold.abona(4000.50); 
+//        cuentaGold.ingresa(500.50);
+//        System.out.println("La Cuenta Gold "+cuentaGold + "\n");
+//        
+//        
         //Cuenta Corriente Platinum
         
         CuentaCorriente cuentaPlatino = new CuentaCorrienteACreditoPlatinum("Fernando ",8000.0);
