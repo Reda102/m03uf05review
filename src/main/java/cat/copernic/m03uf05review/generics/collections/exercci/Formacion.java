@@ -10,5 +10,5 @@ package cat.copernic.m03uf05review.generics.collections.exercci;
  * @author pep
  */
 public enum Formacion {
-    PRIMARIA, SECUNDARIA, BACHILLERATO, GRADO_MEDIA, GRADO_SUPERIOR, GRADO, DOCTORADO, CATEDRATICO;
+    PRIMARIA, SECUNDARIA, BACHILLERATO, GRADO_MEDIO, GRADO_SUPERIOR, GRADO, DOCTORADO, CATEDRATICO;
 }

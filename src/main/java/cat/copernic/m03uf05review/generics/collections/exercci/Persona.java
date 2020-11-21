@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author pep
  */
-public class Persona implements Comparable<Persona> {
+public class Persona {
 
     private int id;
     private Sexo sexo;
@@ -141,9 +141,6 @@ public class Persona implements Comparable<Persona> {
         return true;
     }
 
-    @Override
-    public int compareTo(Persona persona) { // comparamos mediante formacion politica,
-        return orientacionPolitica.compareTo(persona.orientacionPolitica);
-    }
+    
 
 }
